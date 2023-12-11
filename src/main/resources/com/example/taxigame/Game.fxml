@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxigame.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="734.0" layoutX="153.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="731.0" layoutX="362.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="732.0" layoutX="571.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="25.0" layoutY="164.0" stroke="BLACK" strokeType="INSIDE" width="762.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="26.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" width="753.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="28.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="29.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="447.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="661.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="659.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="657.0" layoutY="454.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="457.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="31.0" layoutY="456.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="25.0" layoutY="576.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="31.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="239.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="663.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <ImageView fx:id="controlTaxi" fitHeight="75.0" fitWidth="75.0" layoutX="170.0" layoutY="575.0" onKeyPressed="#turnRight" onKeyTyped="#turnRight" rotate="180.0">
+         <image>
+            <Image url="@../../../../../../../../Downloads/taxi.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

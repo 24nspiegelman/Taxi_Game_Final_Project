@@ -1,4 +1,4 @@
-package com.example.taxi_game_final_project;
+package com.example.taxigame;
 import javafx.scene.shape.Rectangle;
 
 public class Location extends Rectangle{

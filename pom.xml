@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.taxi_game_final_project/com.example.taxi_game_final_project.HelloApplication
+                                com.example.taxi_game_final_project/com.example.taxigame.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

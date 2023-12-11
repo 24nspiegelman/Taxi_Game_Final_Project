@@ -3,6 +3,6 @@ module com.example.taxi_game_final_project {
     requires javafx.fxml;
 
 
-    opens com.example.taxi_game_final_project to javafx.fxml;
-    exports com.example.taxi_game_final_project;
+    opens com.example.taxigame to javafx.fxml;
+    exports com.example.taxigame;
 }

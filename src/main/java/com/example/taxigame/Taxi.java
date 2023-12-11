@@ -1,4 +1,4 @@
-package com.example.taxi_game_final_project;
+package com.example.taxigame;
 
 public class Taxi {
     private int xVelocity = 5;
@@ -7,12 +7,12 @@ public class Taxi {
     private int yPos;
     private int rotation;
 
-
     Taxi(){
         this.xPos = 306;
         this.yPos = 419;
         this.rotation = 180;
     }
+    Vector velocity = new Vector();
     public void turnLeft(){
         rotation = 0;
     }
@@ -26,25 +26,20 @@ public class Taxi {
         rotation = 270;
     }
     public void stop(){
-        if(xVelocity != 0){
-            xVelocity = 0;
-        }
-        if(yVelocity !=0){
-            yVelocity = 0;
-        }
+        velocity.set(0, 0);
     }
     public void go(){
         if(rotation == 0){
-            xVelocity = -5;
+            velocity.set(-5, 0);
         }
         if(rotation == 90){
-            yVelocity = -5;
+            velocity.set(0, -5);
         }
         if(rotation == 180){
-            xVelocity = 5;
+            velocity.set(5, 0);
         }
         if(rotation == 270){
-            yVelocity = 5;
+            velocity.set(0, 5);
         }
     }
 }
