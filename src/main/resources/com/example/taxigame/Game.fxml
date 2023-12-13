@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxigame.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="734.0" layoutX="153.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="731.0" layoutX="362.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="732.0" layoutX="571.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="25.0" layoutY="164.0" stroke="BLACK" strokeType="INSIDE" width="762.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="26.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" width="753.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="28.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="29.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="447.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="661.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="659.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="657.0" layoutY="454.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="457.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="238.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="31.0" layoutY="456.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="25.0" layoutY="576.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="31.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="239.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="446.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="663.0" layoutY="658.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-      <ImageView fx:id="controlTaxi" fitHeight="75.0" fitWidth="75.0" layoutX="170.0" layoutY="575.0" onKeyPressed="#turnRight" onKeyTyped="#turnRight" rotate="180.0">
-         <image>
-            <Image url="@../../../../../../../../Downloads/taxi.png" />
-         </image>
-      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="734.0" layoutX="137.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="731.0" layoutX="346.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="732.0" layoutX="555.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="9.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" width="762.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="10.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" width="753.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="12.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="222.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="430.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="13.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="222.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="431.0" layoutY="229.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="645.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="643.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="641.0" layoutY="431.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="430.0" layoutY="434.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="222.0" layoutY="435.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="15.0" layoutY="433.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#717375" height="70.0" layoutX="9.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" width="748.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="15.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="223.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="430.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="110.0" layoutX="647.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+      <Ellipse fill="#fec942" layoutX="304.0" layoutY="588.0" radiusX="63.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>

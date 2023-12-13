@@ -4,37 +4,26 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.shape.Ellipse;
 
 public class Controller {
 @FXML
+    private Taxi controlTaxi;
+    public void turnUp(){
+//        controlTaxi.turnUp();
+        System.out.println("UP");
+    }
+    public void turnDown(){
+//        controlTaxi.turnDown();
+        System.out.println("DOWN");
+    }
+    public void turnLeft(){
+//        controlTaxi.turnLeft();
+        System.out.println("LEFT");
+    }
+    public void turnRight(){
+//        controlTaxi.turnRight();
+        System.out.println("RIGHT");
+    }
 
-    Taxi controlTaxi = new Taxi();
-    Button button = new Button();
-    public void turnUp(KeyEvent e){
-        if(e.getCode() == KeyCode.E){
-            System.out.println("Is working");
-            controlTaxi.turnUp();
-        }
-    }
-    public void turnDown(KeyEvent e){
-        if(e.getCode() == KeyCode.DOWN){
-            controlTaxi.turnDown();
-        }
-    }
-    public void turnLeft(KeyEvent e){
-        if(e.getCode() == KeyCode.LEFT){
-        controlTaxi.turnLeft();
-        }
-    }
-    public void turnRight(KeyEvent e){
-        if(e.getCode() == KeyCode.RIGHT){
-            controlTaxi.turnRight();
-        }
-    }
-    public Taxi getTaxi(){
-        return this.controlTaxi;
-    }
-    public Button getButton(){
-        return this.button;
-    }
 }
