@@ -18,6 +18,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
             Parent root = loader.load();
             Controller controller = loader.getController();
+//            controller.taxiStart();
             Scene scene = new Scene(root, 400, 400);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override

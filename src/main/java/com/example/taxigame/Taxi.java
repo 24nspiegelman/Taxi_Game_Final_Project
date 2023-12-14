@@ -1,15 +1,16 @@
 package com.example.taxigame;
 
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
+
 public class Taxi {
-    private int xVelocity = 5;
-    private int yVelocity = 5;
-    private int xPos;
-    private int yPos;
+    private final int xVelocity = 5;
+    private final int yVelocity = 5;
     private int rotation;
 
     Taxi(){
-        this.xPos = 306;
-        this.yPos = 419;
+        int xPos = 306;
+        int yPos = 419;
         this.rotation = 180;
     }
     Vector velocity = new Vector();
