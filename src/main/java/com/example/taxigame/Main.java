@@ -8,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Main extends Application {
 
     @Override
@@ -18,30 +16,25 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
             Parent root = loader.load();
             Controller controller = loader.getController();
-//            controller.taxiStart();
+            controller.gameStart();
             Scene scene = new Scene(root, 400, 400);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent event) {
                     System.out.println(event.getCode());
                     switch(event.getCode()) {
-
                         case UP:
                             controller.turnUp();
                             break;
-
                         case LEFT:
                             controller.turnLeft();
                             break;
-
                         case DOWN:
                             controller.turnDown();
                             break;
-
                         case RIGHT:
                             controller.turnRight();
                             break;
-
                         default:
                             System.out.println(event.getCode());
                             break;
@@ -55,7 +48,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
     public static void main(String[] args) {
         launch(args);
     }
