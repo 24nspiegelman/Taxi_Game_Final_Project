@@ -17,23 +17,23 @@ public class Main extends Application {
             Parent root = loader.load();
             Controller controller = loader.getController();
             controller.gameStart();
-            Scene scene = new Scene(root, 400, 400);
+            Scene scene = new Scene(root, 800, 800);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent event) {
                     System.out.println(event.getCode());
                     switch(event.getCode()) {
                         case UP:
-                            controller.turnUp();
+                            controller.moveUp();
                             break;
                         case LEFT:
-                            controller.turnLeft();
+                            controller.moveLeft();
                             break;
                         case DOWN:
-                            controller.turnDown();
+                            controller.moveDown();
                             break;
                         case RIGHT:
-                            controller.turnRight();
+                            controller.moveRight();
                             break;
                         default:
                             System.out.println(event.getCode());
