@@ -53,6 +53,10 @@ public class Main extends Application {
 //                            }
                             controller.pickUp(root);
                             break;
+                        case ENTER:
+                            controller.dropOff(root);
+                            controller.newPassenger(root);
+                            break;
                         default:
                             System.out.println(event.getCode());
                             break;

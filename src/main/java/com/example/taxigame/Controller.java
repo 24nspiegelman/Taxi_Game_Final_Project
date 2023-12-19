@@ -1,118 +1,61 @@
 package com.example.taxigame;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 
 public class Controller {
-    private Queue<Circle> passengers= new LinkedList<>() {
-        @Override
-        public boolean add(Circle circle) {
-            return false;
-        }
-
-        @Override
-        public boolean offer(Circle circle) {
-            return false;
-        }
-
-        @Override
-        public Circle remove() {
-            return null;
-        }
-
-        @Override
-        public Circle poll() {
-            return null;
-        }
-
-        @Override
-        public Circle element() {
-            return null;
-        }
-
-        @Override
-        public Circle peek() {
-            return null;
-        }
-
-        @Override
-        public int size() {
-            return 0;
-        }
-
-        @Override
-        public boolean isEmpty() {
-            return false;
-        }
-
-        @Override
-        public boolean contains(Object o) {
-            return false;
-        }
-
-        @Override
-        public Iterator<Circle> iterator() {
-            return null;
-        }
-
-        @Override
-        public Object[] toArray() {
-            return new Object[0];
-        }
-
-        @Override
-        public <T> T[] toArray(T[] a) {
-            return null;
-        }
-
-        @Override
-        public boolean remove(Object o) {
-            return false;
-        }
-
-        @Override
-        public boolean containsAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public boolean addAll(Collection<? extends Circle> c) {
-            return false;
-        }
-
-        @Override
-        public boolean removeAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public boolean retainAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public void clear() {
-
-        }
-    };
+    @FXML
+    private List<Circle> passengers= new ArrayList<>();
     @FXML
     Rectangle taxi = new Rectangle();
     @FXML
     Circle person = new Circle();
+    @FXML
+    Text score = new Text();
+
+    @FXML
+    Rectangle red = new Rectangle();
+    @FXML
+    Rectangle salmon = new Rectangle();
+    @FXML
+    Rectangle orange = new Rectangle();
+    @FXML
+    Rectangle lightOrange = new Rectangle();
+    @FXML
+    Rectangle yellow = new Rectangle();
+    @FXML
+    Rectangle lime = new Rectangle();
+    @FXML
+    Rectangle green = new Rectangle();
+    @FXML
+    Rectangle teal = new Rectangle();
+    @FXML
+    Rectangle aqua = new Rectangle();
+    @FXML
+    Rectangle lightBlue = new Rectangle();
+    @FXML
+    Rectangle blue = new Rectangle();
+    @FXML
+    Rectangle purple = new Rectangle();
+    @FXML
+    Rectangle magenta = new Rectangle();
+    @FXML
+    Rectangle pink = new Rectangle();
+    @FXML
+    Rectangle brown = new Rectangle();
+    @FXML
+    Rectangle black = new Rectangle();
+
+    Rectangle[] locations = {red, salmon, orange, lightOrange, yellow, lime, green, teal, aqua, lightBlue, blue,
+    purple, magenta, pink, brown, black};
     Color[] colors = {Color.web("#fc2b2b"), Color.web("#ff8280"), Color.web("#f77000"), Color.web("#ffcc6e"),
             Color.web("#fffd21"), Color.web("#9dff00"),Color.web("#20ab13"), Color.web("#1fffb1"),
             Color.web("#1ff7ff"), Color.web( "#1ff7ff"), Color.web("#1f3bff"), Color.web("#7a1fff"),
@@ -125,6 +68,7 @@ public class Controller {
         System.out.println(colors[colorNum]);
         person.setLayoutX((int)(Math.random()*700+50));
         person.setLayoutY((int)(Math.random()*700+50));
+        score.setText("0");
     }
     public void moveLeft(Pane root) {
         taxi.setRotate(0);
@@ -148,16 +92,46 @@ public class Controller {
     }
 
     public void pickUp(Pane root){
-        System.out.println("Person: (" + person.getLayoutX() + ", " + person.getLayoutY());
-        System.out.println("Taxi: (" + taxi.getX() + ", " + taxi.getY());
+        System.out.println("Person: (" + person.getLayoutX() + ", " + person.getLayoutY() + ")");
+        System.out.println("Taxi: (" + taxi.getX() + ", " + taxi.getY() + ")");
 
         if(taxi.getBoundsInParent().intersects(person.getBoundsInParent())){
 
             System.out.println("intersect");
             person.setFill(colors[(int)(Math.random()*16)]);
-            passengers.offer(person);
+            passengers.add(0, person);
             root.getChildren().remove(person);
         }
-        System.out.println(passengers.contains(person));
+    }
+
+    public void dropOff(Pane root){
+        System.out.println("Drop Off");
+        Paint color = passengers.get(0).getFill();
+        Circle p2 = new Circle();
+        p2.setFill(color);
+        p2.setLayoutX((int)(Math.random()*700+50));
+        p2.setLayoutY((int)(Math.random()*700+50));
+        p2.setRadius(17);
+        p2.setStrokeWidth(3);
+        p2.setStroke(Color.BLACK);
+        person = p2;
+        root.getChildren().add(person);
+
+        for(Rectangle r: locations){
+            if(r.getFill().equals(person.getFill())){
+                score.setText(String.valueOf(Integer.parseInt(score.getText())+1));
+            }
+        }
+    }
+
+    public void newPassenger(Pane root){
+        System.out.println("new passenger");
+        Circle newCircle = new Circle();
+        int colorNum = (int) (Math.random()*16);
+        newCircle.setFill(colors[colorNum]);
+        System.out.println(colors[colorNum]);
+        newCircle.setLayoutX((int)(Math.random()*700+50));
+        newCircle.setLayoutY((int)(Math.random()*700+50));
+        root.getChildren().add(newCircle);
     }
 }
