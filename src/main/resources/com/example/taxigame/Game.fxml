@@ -5,7 +5,6 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxigame.Controller">
@@ -46,6 +45,5 @@
          </fill>
       </Rectangle>
       <Circle fx:id="person" fill="DODGERBLUE" layoutX="92.0" layoutY="194.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
-      <Polygon fill="DODGERBLUE" layoutX="459.0" layoutY="399.0" points="-118.5, 28.0, 0.0, 43.0, 0.0, -60.0, 25.5, -147.0, -67.5, -31.0, -84.5, -12.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>

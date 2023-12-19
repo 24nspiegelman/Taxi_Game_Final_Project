@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -14,7 +16,7 @@ public class Main extends Application {
         public void start(Stage stage) {
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
-            Parent root = loader.load();
+            Pane root = loader.load();
             Controller controller = loader.getController();
             controller.gameStart();
             Scene scene = new Scene(root, 800, 800);
@@ -24,16 +26,32 @@ public class Main extends Application {
                     System.out.println(event.getCode());
                     switch(event.getCode()) {
                         case UP:
-                            controller.moveUp();
+                            controller.moveUp(root);
+//                            if(controller.pickUp()){
+//                                root.getChildren().remove(controller.person);
+//                            }
+                            controller.pickUp(root);
                             break;
                         case LEFT:
-                            controller.moveLeft();
+                            controller.moveLeft(root);
+//                            if(controller.pickUp()){
+//                                root.getChildren().remove(controller.person);
+//                            }
+                            controller.pickUp(root);
                             break;
                         case DOWN:
-                            controller.moveDown();
+                            controller.moveDown(root);
+//                            if(controller.pickUp()){
+//                                root.getChildren().remove(controller.person);
+//                            }
+                            controller.pickUp(root);
                             break;
                         case RIGHT:
-                            controller.moveRight();
+                            controller.moveRight(root);
+//                            if(controller.pickUp()){
+//                                root.getChildren().remove(controller.person);
+//                            }
+                            controller.pickUp(root);
                             break;
                         default:
                             System.out.println(event.getCode());
